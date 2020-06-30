@@ -8,8 +8,9 @@
 		<title>Cafe with a Vue</title>
 	</head>
 	<body>
-		<div class="app">
-			<h1>La belle vue</h1>
+
+		<div id="app" class="app">
+			<h1>{{ restaurantName }}</h1>
 			<p class="description">
 				Bienvenue dans notre café la belle vue ! Nous sommes réputés pour notre
 				pain et nos merveilleuses pâtisseries. Faites vous plaisir dès le matin
@@ -19,6 +20,15 @@
 			<footer class="footer">
 				<p>Copyright La belle vue 2020</p>
 			</footer>
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			<script>
+				const app = new Vue ({
+					el: "#app",
+					data: {
+					     restaurantName : "Ghost kitchen"
+					},
+				});
+			</script>
 		</div>
 	</body>
 </html>
